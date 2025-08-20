@@ -15,6 +15,8 @@ import os
 import sys
 from collections import Counter
 # -------------------------------
+from dotenv import load_dotenv
+load_dotenv()
 import requests
 import json
 import base64
