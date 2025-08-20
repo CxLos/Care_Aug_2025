@@ -61,7 +61,7 @@ else:
 # Authorize and load the sheet
 client = gspread.authorize(creds)
 sheet = client.open_by_url(sheet_url)
-worksheet = sheet.worksheet("July")
+worksheet = sheet.worksheet("August")
 data = pd.DataFrame(worksheet.get_all_records())
 df = data.copy()
 
@@ -75,8 +75,8 @@ df = df.apply(
 color_sequence = px.colors.qualitative.Plotly
 
 # Get the reporting month:
-current_month = datetime(2025, 7, 1).strftime("%B")
-report_year = datetime(2025, 7, 1).strftime("%Y")
+current_month = datetime(2025, 8, 1).strftime("%B")
+report_year = datetime(2025, 8, 1).strftime("%Y")
 report = 'Care Network'
 # -------------------------------------------------
 # print(df)
